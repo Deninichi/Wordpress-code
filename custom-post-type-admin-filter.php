@@ -23,7 +23,7 @@
 
             ?>
             <select name="_show_type_filter">
-            <option value=""><?php _e('Filter By Users', 'pdsw-utilities'); ?></option>
+            <option value=""><?php _e('Filter By Type', 'pdsw-utilities'); ?></option>
             <?php
                 $current_value = isset( $_GET['_show_type_filter'] ) ? $_GET['_show_type_filter'] : '';
 
@@ -64,7 +64,7 @@
 
         if ( 'ANY_POST_TYPE' == $type && is_admin() && $pagenow=='edit.php' ) {
 
-            // Filter by User
+            // Filter by Type
             if( isset( $_GET['_show_type_filter'] ) && $_GET['_show_type_filter'] != '' ){
                 $tax_query = $query->get('tax_query');
 
